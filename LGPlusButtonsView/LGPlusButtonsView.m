@@ -1,30 +1,9 @@
 //
-//  LGPlusButtonsView.m
-//  LGPlusButtonsView
+// LGPlusButtonsView.m
+// LGPlusButtonsView
 //
-//
-//  The MIT License (MIT)
-//
-//  Copyright (c) 2015 Grigory Lutkov <Friend.LGA@gmail.com>
-//  (https://github.com/Friend-LGA/LGPlusButtonsView)
-//
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in all
-//  copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//  SOFTWARE.
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
 #import "LGPlusButtonsView.h"
@@ -452,7 +431,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setButtonsTitleFont:(UIFont *)font forOrientation:(LGPlusButtonsViewOrientation)orientation
 {
     for (LGPlusButton *button in _buttonsArray)
@@ -504,7 +482,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setButtonsImageViewContentMode:(UIViewContentMode)contentMode
 {
     for (LGPlusButton *button in _buttonsArray)
@@ -536,7 +513,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setButtonsLayerCornerRadius:(CGFloat)cornerRadius forOrientation:(LGPlusButtonsViewOrientation)orientation;
 {
     for (LGPlusButton *button in _buttonsArray)
@@ -617,7 +593,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setButtonAtIndex:(NSUInteger)index titleFont:(UIFont *)font forOrientation:(LGPlusButtonsViewOrientation)orientation
 {
     NSAssert(_buttonsArray.count > index, kLGPlusButtonsViewIndexAssertionWarning);
@@ -676,7 +651,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setButtonAtIndex:(NSUInteger)index imageViewContentMode:(UIViewContentMode)contentMode
 {
     NSAssert(_buttonsArray.count > index, kLGPlusButtonsViewIndexAssertionWarning);
@@ -713,7 +687,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setButtonAtIndex:(NSUInteger)index layerCornerRadius:(CGFloat)cornerRadius forOrientation:(LGPlusButtonsViewOrientation)orientation;
 {
     NSAssert(_buttonsArray.count > index, kLGPlusButtonsViewIndexAssertionWarning);
@@ -760,7 +733,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setDescriptionsFont:(UIFont *)font forOrientation:(LGPlusButtonsViewOrientation)orientation
 {
     for (LGPlusButtonDescription *description in _descriptionsArray)
@@ -792,7 +764,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setDescriptionsLayerCornerRadius:(CGFloat)cornerRadius forOrientation:(LGPlusButtonsViewOrientation)orientation
 {
     for (LGPlusButtonDescription *description in _descriptionsArray)
@@ -857,7 +828,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setDescriptionAtIndex:(NSUInteger)index font:(UIFont *)font forOrientation:(LGPlusButtonsViewOrientation)orientation
 {
     NSAssert(_descriptionsArray.count > index, kLGPlusButtonsViewIndexAssertionWarning);
@@ -894,7 +864,6 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 }
 
 #pragma mark //
-
 - (void)setDescriptionAtIndex:(NSUInteger)index layerCornerRadius:(CGFloat)cornerRadius forOrientation:(LGPlusButtonsViewOrientation)orientation
 {
     NSAssert(_descriptionsArray.count > index, kLGPlusButtonsViewIndexAssertionWarning);
@@ -2027,24 +1996,24 @@ typedef NS_ENUM(NSUInteger, LGPlusButtonDescriptionsPosition)
 {
     if (observedScrollView)
         NSAssert([observedScrollView isKindOfClass:[UIScrollView class]], @"observedScrollView needs to have UIScrollView kind of class");
-    
+
     if (self.isObserversForScrollViewAdded)
     {
         [_observedScrollView removeObserver:self forKeyPath:@"contentInset"];
         [_observedScrollView removeObserver:self forKeyPath:@"contentOffset"];
         [_observedScrollView removeObserver:self forKeyPath:@"contentSize"];
     }
-    
+
     if (observedScrollView)
     {
         _observersForScrollViewAdded = YES;
-        
+
         [observedScrollView addObserver:self forKeyPath:@"contentInset" options:NSKeyValueObservingOptionNew context:nil];
         [observedScrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
         [observedScrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
     }
     else _observersForScrollViewAdded = NO;
-    
+
     _observedScrollView = observedScrollView;
 }
 

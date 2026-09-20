@@ -1,9 +1,9 @@
 //
-//  main.m
-//  LGPlusButtonsViewDemo
+// main.m
+// LGPlusButtonsViewDemo
 //
-//  Created by Admin on 26.02.15.
-//  Copyright (c) 2015 Grigory Lutkov. All rights reserved.
+// Created by Admin on 26.02.15.
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
 #import <UIKit/UIKit.h>

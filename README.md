@@ -4,17 +4,17 @@ iOS implementation of Floating Action Button (Google Plus Button, fab), that sho
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGPlusButtonsView/Preview.gif" height="366"/> <img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGPlusButtonsView/1.png" height="366"/> <img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGPlusButtonsView/2.png" height="366"/> <img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGPlusButtonsView/3.png" height="366"/>
+<img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGPlusButtonsView/Preview.gif" height="366"/> <img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGPlusButtonsView/1.png" height="366"/> <img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGPlusButtonsView/2.png" height="366"/> <img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGPlusButtonsView/3.png" height="366"/>
 
 ## Installation
 
 ### With source code
 
-[Download repository](https://github.com/Friend-LGA/LGPlusButtonsView/archive/master.zip), then add [LGPlusButtonsView directory](https://github.com/Friend-LGA/LGPlusButtonsView/blob/master/LGPlusButtonsView/) to your project.
+[Download repository](https://github.com/LGLibs/LGPlusButtonsView/archive/master.zip), then add [LGPlusButtonsView directory](./LGPlusButtonsView) to your project.
 
 ### With CocoaPods
 
-CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. To install with cocoaPods, follow the "Get Started" section on [CocoaPods](https://cocoapods.org/).
+CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. To install with cocoaPods, follow the "Get Started" section on [CocoaPods](https://cocoapods.org).
 
 #### Podfile
 ```ruby
@@ -24,11 +24,11 @@ pod 'LGPlusButtonsView', '~> 1.1.0'
 
 ### With Carthage
 
-Carthage is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods. To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage/).
+Carthage is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods. To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage).
 
 #### Cartfile
 ```
-github "Friend-LGA/LGPlusButtonsView" ~> 1.1.0
+github "LGLibs/LGPlusButtonsView" ~> 1.1.0
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ You have several methods for initialization:
                           showAfterInit:(BOOL)showAfterInit;
 ```
 
-More init methods you can find in [LGPlusButtonsView.h](https://github.com/Friend-LGA/LGPlusButtonsView/blob/master/LGPlusButtonsView/LGPlusButtonsView.h)
+More init methods you can find in [LGPlusButtonsView.h](./LGPlusButtonsView/LGPlusButtonsView.h)
 
 ### Handle actions
 
@@ -101,8 +101,16 @@ kLGPlusButtonsViewActionNotification;
 
 ### More
 
-For more details try Xcode [Demo project](https://github.com/Friend-LGA/LGPlusButtonsView/blob/master/Demo) and see [LGPlusButtonsView.h](https://github.com/Friend-LGA/LGPlusButtonsView/blob/master/LGPlusButtonsView/LGPlusButtonsView.h)
+For more details try [Xcode Demo Project](./Demo) and see [LGPlusButtonsView.h](./LGPlusButtonsView/LGPlusButtonsView.h)
+
+## Repos / Mirrors
+
+- [TRULAB](https://trulab.ru/LGLibs/LGPlusButtonsView)
+- [GitHub](https://github.com/LGLibs/LGPlusButtonsView)
+- [GitLab](https://gitlab.com/LGLibs/LGPlusButtonsView)
+- [Gitea](https://gitea.com/LGLibs/LGPlusButtonsView)
 
 ## License
 
-LGPlusButtonsView is released under the MIT license. See [LICENSE](https://raw.githubusercontent.com/Friend-LGA/LGPlusButtonsView/master/LICENSE) for details.
+Copyright (c) 2015 Grigorii Lutkov \<grigorii@lutkov.dev\></br>
+Licensed under the [MIT License](./LICENSE)
