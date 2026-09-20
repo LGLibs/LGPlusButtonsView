@@ -112,5 +112,6 @@ For more details try [Xcode Demo Project](./Demo) and see [LGPlusButtonsView.h](
 
 ## License
 
-Copyright (c) 2015 Grigorii Lutkov \<grigorii@lutkov.dev\></br>
+Copyright (c) 2015 Grigorii Lutkov \<grigorii@lutkov.dev\>
+
 Licensed under the [MIT License](./LICENSE)
